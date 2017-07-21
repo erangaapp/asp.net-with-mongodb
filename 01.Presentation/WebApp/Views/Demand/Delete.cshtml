@@ -1,0 +1,78 @@
+﻿@model BusinessEntities.Demand
+@{
+    ViewBag.Title = "Delete Demands";
+}
+
+<div class="row">
+    <hgroup>
+        <h2>@ViewBag.Title</h2>
+    </hgroup>
+</div>
+
+@if (ViewBag.Status != null && ViewBag.Status == "Error")
+{
+    <div class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span><strong>Error!</strong>&nbsp;Error at deleting dook demand! Please try again</div>
+}
+
+<div class="row">
+    @using (Html.BeginForm("DeleteDemand", "Demand", new { id = Model.Id }, FormMethod.Post, new { role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="row alert alert-danger ">
+            <div class="col-md-8">
+                <div class="text-center"> <span class="glyphicon glyphicon-exclamation-sign"></span><strong>Are you sure?</strong> Do you want to delete this demand.</div>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Yes! Delete It</button>
+            </div>
+            <div class="col-md-2">
+                <a  href="/Demand/MyDemands" class="btn btn-info"><i class="glyphicon glyphicon-circle-arrow-left"></i> Back To My Demands</a>
+            </div>
+        </div>
+
+        <hr class="col-md-12" />
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CreatedDate, "Demand Date", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <p style="padding:10px">@Model.CreatedDate.ToString("dd MMM yyyy")</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Book.Title, "Book Title", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <p style="padding:10px">@Model.Book.Title</p>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Book.Description, "Book Description", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <p style="padding:10px">@Model.Book.Description</p>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Book.Publisher, "Book Publisher", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <p style="padding:10px">@Model.Book.Publisher</p>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Book.Authors, "Authors", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @{
+                    foreach (var author in Model.Book.Authors)
+                    {
+                        <label class="control-label">@author</label>
+                    }
+                }
+            </div>
+        </div>
+
+                    }
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>

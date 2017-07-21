@@ -1,0 +1,103 @@
+﻿@model IList<BusinessEntities.Book>
+
+<div class="row">
+    @{
+        if (ViewBag.Status == "Success")
+        {
+            <div class="alert alert-success"><span class="glyphicon glyphicon-ok-sign"></span><strong>Success!</strong>&nbsp;Book demand successfully completed!</div>
+        }
+        else if (ViewBag.Status == "NotSelected")
+        {
+            <div class="alert alert-warning"><span class="glyphicon glyphicon-warning-sign"></span><strong>Please select books!</strong>&nbsp;Please select few books before demand!</div>
+        }
+        else
+        {
+            <div class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span><strong>Error!</strong>&nbsp;Error at book demand saving! Please try again&nbsp;<a href="../Demand/BooksDemand">Go to books demand</a></div>
+        }
+    }
+
+</div>
+
+@if (Model != null && Model.Count() > 0)
+{
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h4>Following @Model.Count() book(s) are successfully demanded.</h4>
+        </div>
+        <div class="panel-body">
+
+            <table id="books" class="table select-checkbox">
+                <thead>
+                    <tr>
+                        <th width="35%">Title</th>
+                        <th width="10%">Description</th>
+                        <th width="20%">Publisher</th>
+                        <th width="20%">Authors</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>
+                                <button id="viewDescription" onclick='showHideDescription("@book.Id",this)' value="View" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                            </td>
+                            <td>@book.Publisher</td>
+                            <td>
+                                @foreach (var author in book.Authors)
+                                {
+                                    <span> @author </span>
+                                }
+                            </td>
+                        </tr>
+                        <tr style="display:none" id="@book.Id">
+                            <td colspan="5">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 col-xs-12">
+                                        <h5><strong>Book Description</strong></h5>
+                                        <p class="alert alert-warning">@book.Description</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+        <script>
+
+            $(function () {
+
+                //Clear the selected books and search content when reload the demand status
+                $("#selectedBooks").hide();
+                $("#bookIds").val();
+                $("#query").val();
+
+            });
+
+            function showHideDescription(bookId, btn) {
+
+                $(btn).find('span').toggleClass('glyphicon-plus-sign glyphicon-minus-sign');
+                $(btn).toggleClass('btn-success btn-warning');
+
+                if ($("#" + bookId).css('display') === 'none') {
+                    $("#" + bookId).show();
+
+                } else {
+
+                    $("#" + bookId).hide();
+                }
+
+            }
+
+        </script>
+
+}

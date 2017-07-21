@@ -1,0 +1,16 @@
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\Core.Service.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\Core.Service.pdb
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\BusinessEntities.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\Core.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\MongoDB.Bson.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\MongoDB.Driver.Core.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\MongoDB.Driver.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\BusinessEntities.pdb
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\Core.pdb
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\MongoDB.Bson.xml
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\MongoDB.Driver.xml
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\bin\Debug\MongoDB.Driver.Core.xml
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\obj\Debug\Core.Service.csprojResolveAssemblyReference.cache
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\obj\Debug\Core.Service.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Service\obj\Debug\Core.Service.pdb

@@ -1,0 +1,126 @@
+﻿@model IList<BusinessEntities.Book>
+
+@if (Model == null || Model.Count() == 0)
+{
+    <div class="alert alert-warning">
+        <span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;<strong>We are sorry!</strong>&nbsp;No books matched with your search query.
+    </div>
+}
+else
+{
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h4>@Model.Count() Book(s) found</h4>
+        </div>
+        <div class="panel-body">
+
+            <table id="books" class="table select-checkbox">
+                <thead>
+                    <tr>
+                        <th width="5%">Select</th>
+                        <th width="35%">Title</th>
+                        <th width="10%">Description</th>
+                        <th width="20%">Publisher</th>
+                        <th width="20%">Authors</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var book in Model)
+                    {
+                        <tr id="tr_@book.Id" class="alert">
+                            <td><input type="checkbox" id="chk_@book.Id" onclick='selectRow("@book.Id",this)' /></td>
+                            <td>@book.Title</td>
+                            <td>
+                                <button id="viewDescription" href="#" onclick='showHideDescription("@book.Id",this)' value="View" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                            </td>
+                            <td>@book.Publisher</td>
+                            <td>
+                                @foreach (var author in book.Authors)
+                                {
+                                    <span> @author </span>
+                                }
+                            </td>
+                        </tr>
+                        <tr style="display:none" id="@book.Id">
+                            <td colspan="5">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 col-xs-12">
+                                        <h5><strong>Book Description</strong></h5>
+                                        <p class="alert alert-warning">@book.Description</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script>
+
+        var bookIds = [];
+
+        function showHideDescription(bookId, btn) {
+
+            $(btn).find('span').toggleClass('glyphicon-plus-sign glyphicon-minus-sign');
+            $(btn).toggleClass('btn-success btn-warning');
+
+            if ($("#" + bookId).css('display') === 'none') {
+                $("#" + bookId).show();
+
+            } else {
+
+                $("#" + bookId).hide();
+            }
+
+        }
+
+        function selectRow(bookId, chk) {
+
+            $("#tr_" + bookId).toggleClass('alert alert-success');
+            var rows = $('#books tbody tr.alert-success').length;
+            $("#bookCount").text(rows > 0 ? "You have selected " + rows + " Book(s) for demand" : "");
+
+            if (rows > 0) {
+
+                $("#selectedBooks").show();
+                $("#selectedBooks").addClass("panel panel-default");
+
+            }
+            else {
+
+                $("#selectedBooks").hide();
+            }
+
+            if (chk.checked) {
+
+                bookIds.push(bookId);
+
+                $("#bookIds").val(bookIds);
+
+            } else {
+
+                var tempBookIds = [];
+
+                for (var i = 0; i < bookIds.length; i++) {
+
+                    if (bookId !== bookIds[i]) {
+
+                        tempBookIds.push(bookIds[i]);
+
+                    }
+                }
+
+                bookIds = tempBookIds;
+            }
+
+        }
+
+    </script>
+
+}

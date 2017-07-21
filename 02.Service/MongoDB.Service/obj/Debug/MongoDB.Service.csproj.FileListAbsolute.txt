@@ -1,0 +1,13 @@
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\MongoDB.Service.dll
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\MongoDB.Service.pdb
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\BusinessEntities.dll
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\Core.dll
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\Core.Service.dll
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\Core.Service.pdb
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\Core.pdb
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\BusinessEntities.pdb
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\obj\Debug\MongoDB.Service.csprojResolveAssemblyReference.cache
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\obj\Debug\MongoDB.Service.dll
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\obj\Debug\MongoDB.Service.pdb
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\MongoDB.Bson.dll
+D:\Development\crossover\assignment\crossover.assignment\02.Service\MongoDB.Service\bin\Debug\MongoDB.Bson.xml

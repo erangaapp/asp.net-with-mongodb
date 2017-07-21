@@ -1,0 +1,104 @@
+﻿@model IList<BusinessEntities.Demand>
+@{
+    ViewBag.Title = "My Demands";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h2>@ViewBag.Title</h2>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.Status) && ViewBag.Status == "DeleteSuccess")
+{
+    <div class="alert alert-success">
+        <span class="glyphicon glyphicon-ok-sign"></span>&nbsp;<strong>Deleted!</strong>&nbsp;Demand successfully deleted.
+    </div>
+}
+
+@if (Model == null || Model.Count() == 0)
+{
+    <div class="alert alert-warning">
+        <span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;<strong>Not found!</strong>&nbsp;Could not found any demand for you. @Html.ActionLink("Demand a new book", "BooksDemand", "Demand", null, new { @class = "alert-link" })
+    </div>
+}
+else
+{
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h4>You have @Model.Count() book(s) demanded.</h4>
+        </div>
+        <div class="panel-body">
+
+            <table id="books" class="table select-checkbox">
+                <thead>
+                    <tr>
+                        <th width="25%">Title</th>
+                        <th width="10%">Description</th>
+                        <th width="20%">Publisher</th>
+                        <th width="20%">Authors</th>
+                        <th width="10%">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var demand in Model)
+                    {
+                        var book = demand.Book;
+
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>
+                                <button id="viewDescription" onclick='showHideDescription("@demand.Id",this)' value="View" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                            </td>
+                            <td>@book.Publisher</td>
+                            <td>
+                                @foreach (var author in book.Authors)
+                                {
+                                    <span> @author </span>
+                                }
+                            </td>
+                            <td>
+                                <a id="deleteDemand" href="../Demand/Delete/?id=@demand.Id" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash"></i> Remove</a>
+                            </td>
+                        </tr>
+                        <tr style="display:none" id="@demand.Id">
+                            <td colspan="6">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 col-xs-12">
+                                        <h5><strong>Book Description</strong></h5>
+                                        <p class="alert alert-warning">@book.Description</p>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+    <script>
+
+        function showHideDescription(bookId, btn) {
+
+            $(btn).find('span').toggleClass('glyphicon-plus-sign glyphicon-minus-sign');
+            $(btn).toggleClass('btn-success btn-warning');
+
+            if ($("#" + bookId).css('display') === 'none') {
+                $("#" + bookId).show();
+
+            } else {
+
+                $("#" + bookId).hide();
+            }
+
+        }
+
+    </script>
+
+}

@@ -1,0 +1,16 @@
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\Core.Repository.MongoDb.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\Core.Repository.MongoDb.pdb
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\BusinessEntities.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\Core.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\MongoDB.Bson.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\MongoDB.Driver.Core.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\MongoDB.Driver.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\BusinessEntities.pdb
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\Core.pdb
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\MongoDB.Bson.xml
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\MongoDB.Driver.xml
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\bin\Debug\MongoDB.Driver.Core.xml
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\obj\Debug\Core.Repository.MongoDb.csprojResolveAssemblyReference.cache
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\obj\Debug\Core.Repository.MongoDb.dll
+D:\Development\crossover\assignment\crossover.assignment\03.Repository\Core.Repository.MongoDb\obj\Debug\Core.Repository.MongoDb.pdb

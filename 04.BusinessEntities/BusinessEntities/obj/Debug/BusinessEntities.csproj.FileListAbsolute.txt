@@ -1,0 +1,13 @@
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\BusinessEntities.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\BusinessEntities.pdb
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\MongoDB.Bson.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\MongoDB.Driver.Core.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\MongoDB.Driver.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\MongoDB.Bson.xml
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\MongoDB.Driver.xml
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\bin\Debug\MongoDB.Driver.Core.xml
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\obj\Debug\BusinessEntities.dll
+D:\Development\crossover\assignment\crossover.assignment\04.BusinessEntities\BusinessEntities\obj\Debug\BusinessEntities.pdb
